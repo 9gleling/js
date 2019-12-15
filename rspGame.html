@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>가위바위보 게임</title>
+</head>
+<body>
+<div id="result">
+    <span>1: 가위, 0: 바위, 2: 보</span><br>
+    <span>a: 공격, d: 방어</span><br>
+</div>
+<script>
+
+var gameover = true;
+var rspArr = {1:'가위', 0:'바위', 2:'보'};
+// var resultRsp;
+
+function Message(msg, style){
+    var div = document.createElement('div');
+
+    // console.log(div);
+
+    div.innerHTML = msg;
+    
+    document.getElementById('result').appendChild(div);
+}
+
+function User(id, rsp, skill, life){
+    this.id = id;
+    this.rsp = rsp;
+    this.skill = skill;
+    this.life = life;
+
+}
+
+User.prototype.lose = function(){
+    this.life -= 1;
+
+    Message(this.id + ' 공격당함');
+
+    if(this.life < 0){
+        Message(player.id+' win');
+
+        gameover = true;
+
+    }
+}
+
+User.prototype.wind = function(){
+    Message(this.id+' wind');
+}
+
+function Computer(id, rsp, life){
+    this.id = 'com';
+    this.rsp = rsp;
+    this.life = life || 3;
+}
+
+Computer.prototype = Object.create(User.prototype);
+Computer.prototype.constructor = Computer;
+
+function Player(id, rsp, skill, life){
+    User.apply(this, arguments);
+   
+    this.life = life || 3;
+
+}
+
+Player.prototype = Object.create(User.prototype);
+Player.prototype.constructor = Player;
+Player.prototype.lose = function(){
+    this.life--;
+
+    Message(this.id+'공격당함');
+
+    if(this.life < 0){
+        Message('game over');
+
+        gameover = true;
+    }
+}
+
+Player.prototype.wind = function(target){
+    Message('wind');
+    target.lose();
+    if(target.life < 0) Message(this.id+'win');
+
+}
+
+Player.prototype.defense = function(){
+    Message('defense');
+
+}
+
+function playRsp(player, computer){
+    console.log(player);
+    console.log(computer);
+    var result = '';
+    if(player == computer)  result = "draw";
+    else if ((computer+1) % 3 == player) result = "lose"
+    else result = "win"
+
+    return result;
+}
+
+function Play(playerCode){
+    console.log('game over'+gameover);
+    if(gameover) {
+        Message('game over');
+        return;
+    }
+
+    player.rsp = parseInt(playerCode);
+    var resultRsp = playRsp(player.rsp, computer.rsp);
+    Message(player.id+' : '+rspArr[player.rsp]);
+    Message(computer.id+' : '+rspArr[computer.rsp]);
+    Message(resultRsp);
+    if(resultRsp == "lose"){
+        player.lose();
+    }else if(resultRsp == "win"){
+        computer.lose();
+    }
+
+
+}
+
+function getPlayerCode(){
+    if(gameover) return;
+    document.addEventListener('keydown', function(e){
+        e.preventDefault();
+        computer.rsp = Math.floor(Math.random() * 3);
+        player.rsp = e.key;
+
+        Play(player.rsp);
+
+    });
+}
+
+var player = new Player(prompt('id'));
+var computer = new Computer();
+
+getPlayerCode();
+
+</script>
+</body>
+</html>
