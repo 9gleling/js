@@ -1,2 +1,3 @@
 # js
-### javascript oop rsp game
+##### javascript rsp game
+##### oop
