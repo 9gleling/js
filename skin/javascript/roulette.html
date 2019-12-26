@@ -1,0 +1,108 @@
+
+<html>
+    <head>
+    <title>룰렛</title>
+    <style>
+        body {margin:0;padding:0;}
+        .wrapper {width:100%;}
+        .wrapper .roulette_area img { display: block; margin: 0px auto; }
+        .wrapper .roulette_area button { display: block; margin: 0px auto; font-size: 20px; padding: 20px}
+    </style>
+    </head>
+    
+    <body>
+    <div class="wrapper">
+        <div class="roulette_area">
+            <div id="roulette">   
+                <img src="../../img/img_roulette.png">
+            </div>
+            <div>
+                <button onclick="rouletteEvt.playRoulette();">start</button>
+            </div>
+
+            <div id="test"></div>
+        </div>
+    </div>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript">
+    var rouletteEvt = (function(){            
+        var myChance = 5;
+        var loading = false;
+        
+        const goods = ['1등', '2등', '3등', '4등', '5등', '6등', '7등', '8등'];
+        const weight = [1, 10, 50, 100, 150, 200, 250, 300];
+        // const weight = [300, 300, 300, 300, 300, 300, 300, 300];
+        const goods_cnt = [1, 2, 10, 30, 50, 80, 100, 200];
+        const rate = [320, 280, 235, 190, 146, 100, 57, 8];
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+        function getRandomWeight(){
+            return new Promise(function (resolve, reject) {
+
+                var weightSum = weight.reduce(reducer);
+                var randNo = Math.floor(Math.random() * weightSum) + 1;
+                var goodsNo = weight.length;
+
+                for(var i=0; i<weight.length; i++){
+                    randNo -= weight[i];
+                    if(randNo < 1) {
+                        goodsNo = i;
+                        break;
+                    }
+                
+                }
+                resolve(goodsNo);
+                
+
+            });
+
+        }
+
+
+        return {
+            playRoulette: function(){
+                if(myChance <= 0){
+                    alert('기회가 없습니다.');
+                    return false;
+                }
+                myChance--;
+
+                if(loading){
+                    alert('실행 중입니다.');
+                    return false;
+                }
+                loading = true;
+                getRandomWeight()
+                .then(function(goodsNo){
+                    var max = 5;
+                    var min = -5;
+                    var _rate   = rate[goodsNo];
+                    var random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+                    console.log(_rate + random + ( 360 * 7 ));
+                    console.log(goodsNo+1);
+                    $('#roulette img').rotate({
+                        
+                        angle:0,
+                        animateTo: _rate + random + ( 360 * 7 ),
+                        // animateTo: 3000,
+                        center: ["50%", "50%"],
+                        callback: function(){
+                            loading = false;
+                        },
+                        duration:8400
+                    });
+
+                    // console.log(goodsNo);
+                })
+                .catch(function(error){
+
+                });
+
+               
+                
+            }
+        }
+    })();
+</script>
