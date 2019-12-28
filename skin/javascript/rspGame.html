@@ -1,0 +1,108 @@
+
+<html>
+<head>
+<title>가위바위보 게임</title>
+</head>
+<body>
+<div id="result">
+    <span>1: 가위, 0: 바위, 2: 보</span><br>
+</div>
+</body>
+<script>
+var gameover = true;
+var rspArr = {1:'가위', 0:'바위', 2:'보'};
+function Message(msg){
+    var div = document.createElement('div');
+    
+    div.innerHTML = msg;
+    
+    document.getElementById('result').appendChild(div);
+}
+function User(id, rsp, life){
+    this.id = id;
+    this.rsp = rsp;
+    this.life = life;
+}
+User.prototype.lose = function(){
+    this.life -= 1;
+    Message(this.id + ' lose');
+    if(this.life < 0){
+        Message(player.id+' win');
+        gameover = true;
+    }
+}
+User.prototype.win = function(){
+    Message(this.id+' win');
+}
+function Computer(id, rsp, life){
+    this.id = 'com';
+    this.rsp = rsp;
+    this.life = life || 3;
+}
+Computer.prototype = Object.create(User.prototype);
+Computer.prototype.constructor = Computer;
+function Player(id, rsp, life){
+    User.apply(this, arguments);
+    
+    this.life = life || 3;
+}
+Player.prototype = Object.create(User.prototype);
+Player.prototype.constructor = Player;
+Player.prototype.lose = function(){
+    this.life--;
+    Message(this.id+' lose');
+    if(this.life < 0){
+        Message('game over');
+        gameover = true;
+    }
+}
+Player.prototype.win = function(target){
+    Message('win');
+    if(target.life < 0) Message(this.id+'win');
+}
+function playRsp(player, computer){
+    console.log(player);
+    console.log(computer);
+    var result = '';
+    if(player == computer)  result = "draw";
+    else if ((computer+1) % 3 == player) result = "lose"
+    else result = "win"
+    return result;
+}
+function Play(playerCode){
+    
+    if(gameover) {
+        Message('game over');
+        return;
+    }
+    player.rsp = parseInt(playerCode);
+    var resultRsp = playRsp(player.rsp, computer.rsp);
+    Message(player.id+' : '+rspArr[player.rsp]);
+    Message(computer.id+' : '+rspArr[computer.rsp]);
+    Message(resultRsp);
+    if(resultRsp == "lose"){
+        player.lose();
+    }else if(resultRsp == "win"){
+        computer.lose();
+    }
+
+}
+
+
+document.addEventListener('keydown', function(e){
+    
+    computer.rsp = Math.floor(Math.random() * 3);
+    player.rsp = e.key;
+    
+        Play(e.key);
+    
+});
+
+var player = new Player(prompt('id'));
+var computer = new Computer();
+
+if(player) gameover = false;
+
+</script>
+
+</html>
