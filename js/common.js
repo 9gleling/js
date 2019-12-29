@@ -1,8 +1,7 @@
 
 $(document).ready( function() {
 
-    $("#sidebar-wrapper").load("common/side.html");
-    $("#header").load("common/header.html");
-    $("#footer").load("common/footer.html");
+    $("#sidebar-wrapper").load("https://9gleling.github.io/js/skin/common/side.html");
+    $("#header").load("https://9gleling.github.io/js/skin/common/header.html");
+    $("#footer").load("https://9gleling.github.io/js/skin/common/footer.html");
 });
-
