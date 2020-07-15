@@ -1,0 +1,67 @@
+<style>
+    div {display: block;}
+    #wrap {width: 500px; height: 200px;}
+    .total_rate {position: relative;margin-top: 0px; height: 30px;}
+    .total_rate > input {position: fixed;top: -50px;width:30px;cursor: pointer;font-size:14px;}
+    .total_rate > label {overflow: hidden;float: left;position: relative;width:30px;height:30px;white-space: nowrap;cursor: pointer;}
+    /* .total_rate > em {display:block;float:left;margin-left:30px;font-weight:bold;letter-spacing:-1px} */
+    .result {position: relative; margin-top: 20px;}
+    
+</style>
+
+<div id="wrap">
+    <div class="total_rate" id="_total_rate" data-rate="">
+        <input type="radio" id="rate1" name="rate" class="rate" value="1" />
+        <label for="rate1">☆</label>
+        <input type="radio" id="rate2" name="rate" class="rate" value="2" />
+        <label for="rate2">☆</label>
+        <input type="radio" id="rate3" name="rate" class="rate" value="3" />
+        <label for="rate3">☆</label>
+        <input type="radio" id="rate4" name="rate" class="rate" value="4" />
+        <label for="rate4">☆</label>
+        <input type="radio" id="rate5" name="rate" class="rate" value="5" />
+        <label for="rate5">☆</label>
+    
+        <!-- <em>클릭해주세요.</em> -->
+    </div>
+    <div class="result" id="result">
+
+    </div>
+</div>
+
+<script src="../../../bootstrap/vendor/jquery/jquery.min.js"></script>
+<script>
+$(function(){
+    var updateRateUI = function( idx ) {
+        var $label = $('.total_rate > label'),
+            $curRate = $('#_cur_rate');
+
+        $curRate.html( idx );
+        $label.html('☆');
+        $label.each(function(index) {
+            if( index >= idx ) return;
+            $(this).html('★');
+        });
+    };
+
+    $('.total_rate > label').on('mouseover mouseleave click', function(e) {
+        var inputId = '#' + $(this).attr('for'),
+            radioVal = $(inputId).val(),
+            scroeHtml = '';
+
+        if( e.type == 'click' ) {
+            $('#_total_rate').data('rate', radioVal);
+
+	        $('.rate').prop('checked', false);
+            $(inputId).prop('checked', true);
+            scroeHtml += radioVal+'점 입니다.';
+            $('#result').html(scroeHtml);
+        } else if( e.type == 'mouseleave' ) {
+            radioVal = $('#_total_rate').data('rate') || 0;
+        }
+
+        updateRateUI( radioVal );
+    });
+});
+
+</script>
