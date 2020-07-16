@@ -39,10 +39,8 @@
 <script>
 $(function(){
     var updateRateUI = function( idx ) {
-        var $label = $('.total_rate > label'),
-            $curRate = $('#_cur_rate');
+        var $label = $('.total_rate > label');
 
-        $curRate.html( idx );
         $label.html('☆');
         $label.each(function(index) {
             if( index >= idx ) return;
