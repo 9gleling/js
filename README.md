@@ -13,4 +13,4 @@
 	3. 검색자동완성
 		1. 쓰로틀링을 이용한 검색
 		2. jquery ajax 호출 시 코드 내 주석 참고
-		3. https://9gleling.github.io/js/skin/javascript/debounceAndThrottle/Throttle.html
+		3. https://9gleling.github.io/js/skin/javascript/debounceAndThrottle/throttle.html
