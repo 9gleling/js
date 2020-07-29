@@ -1,0 +1,784 @@
+{
+    "university": [
+        {
+            "name": "KAIST",
+            "extraParam": "카이스트",
+        },
+        {
+            "name": "KC대학교",
+            "extraParam": "케이씨대학교",
+        },
+        {
+            "name": "UNIST",
+            "extraParam": "유니스트",
+        },
+        {
+            "name": "가야대",
+            "extraParam": null,
+        },
+        {
+            "name": "가천대",
+            "extraParam": null,
+        },
+        {
+            "name": "가톨릭관동대",
+            "extraParam": null,
+        },
+        {
+            "name": "가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "감리교신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "강남대",
+            "extraParam": null,
+        },
+        {
+            "name": "강원대",
+            "extraParam": null,
+        },
+        {
+            "name": "건국대",
+            "extraParam": null,
+        },
+        {
+            "name": "건양대",
+            "extraParam": null,
+        },
+        {
+            "name": "경기대",
+            "extraParam": null,
+        },
+        {
+            "name": "경남과학기술대",
+            "extraParam": null,
+        },
+        {
+            "name": "경남대",
+            "extraParam": null,
+        },
+        {
+            "name": "경동대",
+            "extraParam": null,
+        },
+        {
+            "name": "경북대",
+            "extraParam": null,
+        },
+        {
+            "name": "경상대",
+            "extraParam": null,
+        },
+        {
+            "name": "경성대",
+            "extraParam": null,
+        },
+        {
+            "name": "경운대",
+            "extraParam": null,
+        },
+        {
+            "name": "경인교대",
+            "extraParam": null,
+        },
+        {
+            "name": "경일대",
+            "extraParam": null,
+        },
+        {
+            "name": "경주대",
+            "extraParam": null,
+        },
+        {
+            "name": "경희대",
+            "extraParam": null,
+        },
+        {
+            "name": "계명대",
+            "extraParam": null,
+        },
+        {
+            "name": "고려대",
+            "extraParam": null,
+        },
+        {
+            "name": "고신대",
+            "extraParam": null,
+        },
+        {
+            "name": "공주교대",
+            "extraParam": null,
+        },
+        {
+            "name": "공주대",
+            "extraParam": null,
+        },
+        {
+            "name": "광신대",
+            "extraParam": null,
+        },
+        {
+            "name": "광운대",
+            "extraParam": null,
+        },
+        {
+            "name": "광주가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "광주교대",
+            "extraParam": null,
+        },
+        {
+            "name": "광주대",
+            "extraParam": null,
+        },
+        {
+            "name": "광주여대",
+            "extraParam": null,
+        },
+        {
+            "name": "국민대",
+            "extraParam": null,
+        },
+        {
+            "name": "군산대",
+            "extraParam": null,
+        },
+        {
+            "name": "극동대",
+            "extraParam": null,
+        },
+        {
+            "name": "금강대",
+            "extraParam": null,
+        },
+        {
+            "name": "금오공과대",
+            "extraParam": null,
+        },
+        {
+            "name": "김천대",
+            "extraParam": null,
+        },
+        {
+            "name": "꽃동네대",
+            "extraParam": null,
+        },
+        {
+            "name": "나사렛대",
+            "extraParam": null,
+        },
+        {
+            "name": "남부대",
+            "extraParam": null,
+        },
+        {
+            "name": "남서울대",
+            "extraParam": null,
+        },
+        {
+            "name": "단국대",
+            "extraParam": null,
+        },
+        {
+            "name": "대구가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "대구교대",
+            "extraParam": null,
+        },
+        {
+            "name": "대구대",
+            "extraParam": null,
+        },
+        {
+            "name": "대구예술대",
+            "extraParam": null,
+        },
+        {
+            "name": "대구한의대",
+            "extraParam": null,
+        },
+        {
+            "name": "대신대",
+            "extraParam": null,
+        },
+        {
+            "name": "대전가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "대전대",
+            "extraParam": null,
+        },
+        {
+            "name": "대전신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "대진대",
+            "extraParam": null,
+        },
+        {
+            "name": "덕성여대",
+            "extraParam": null,
+        },
+        {
+            "name": "동국대",
+            "extraParam": null,
+        },
+        {
+            "name": "동덕여대",
+            "extraParam": null,
+        },
+        {
+            "name": "동명대",
+            "extraParam": null,
+        },
+        {
+            "name": "동서대",
+            "extraParam": null,
+        },
+        {
+            "name": "동신대",
+            "extraParam": null,
+        },
+        {
+            "name": "동아대",
+            "extraParam": null,
+        },
+        {
+            "name": "동양대",
+            "extraParam": null,
+        },
+        {
+            "name": "동의대",
+            "extraParam": null,
+        },
+        {
+            "name": "루터대",
+            "extraParam": null,
+        },
+        {
+            "name": "명지대",
+            "extraParam": null,
+        },
+        {
+            "name": "목원대",
+            "extraParam": null,
+        },
+        {
+            "name": "목포가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "목포대",
+            "extraParam": null,
+        },
+        {
+            "name": "목포해양대",
+            "extraParam": null,
+        },
+        {
+            "name": "배재대",
+            "extraParam": null,
+        },
+        {
+            "name": "백석대",
+            "extraParam": null,
+        },
+        {
+            "name": "부경대",
+            "extraParam": null,
+        },
+        {
+            "name": "부산가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "부산교대",
+            "extraParam": null,
+        },
+        {
+            "name": "부산대",
+            "extraParam": null,
+        },
+        {
+            "name": "부산외대",
+            "extraParam": null,
+        },
+        {
+            "name": "부산장신대",
+            "extraParam": null,
+        },
+        {
+            "name": "삼육대",
+            "extraParam": null,
+        },
+        {
+            "name": "상명대",
+            "extraParam": null,
+        },
+        {
+            "name": "상지대",
+            "extraParam": null,
+        },
+        {
+            "name": "서강대",
+            "extraParam": null,
+        },
+        {
+            "name": "서경대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울과학기술대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울교대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울기독대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울시립대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울여대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울장신대",
+            "extraParam": null,
+        },
+        {
+            "name": "서울한영대",
+            "extraParam": null,
+        },
+        {
+            "name": "서원대",
+            "extraParam": null,
+        },
+        {
+            "name": "선문대",
+            "extraParam": null,
+        },
+        {
+            "name": "성결대",
+            "extraParam": null,
+        },
+        {
+            "name": "성공회대",
+            "extraParam": null,
+        },
+        {
+            "name": "성균관대",
+            "extraParam": null,
+        },
+        {
+            "name": "성신여대",
+            "extraParam": null,
+        },
+        {
+            "name": "세명대",
+            "extraParam": null,
+        },
+        {
+            "name": "세종대",
+            "extraParam": null,
+        },
+        {
+            "name": "세한대",
+            "extraParam": null,
+        },
+        {
+            "name": "송원대",
+            "extraParam": null,
+        },
+        {
+            "name": "수원가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "수원대",
+            "extraParam": null,
+        },
+        {
+            "name": "숙명여대",
+            "extraParam": null,
+        },
+        {
+            "name": "순천대",
+            "extraParam": null,
+        },
+        {
+            "name": "순천향대",
+            "extraParam": null,
+        },
+        {
+            "name": "숭실대",
+            "extraParam": null,
+        },
+        {
+            "name": "신경대",
+            "extraParam": null,
+        },
+        {
+            "name": "신라대",
+            "extraParam": null,
+        },
+        {
+            "name": "신한대",
+            "extraParam": null,
+        },
+        {
+            "name": "아세아연합신대",
+            "extraParam": null,
+        },
+        {
+            "name": "아주대",
+            "extraParam": null,
+        },
+        {
+            "name": "안동대",
+            "extraParam": null,
+        },
+        {
+            "name": "안양대",
+            "extraParam": null,
+        },
+        {
+            "name": "연세대",
+            "extraParam": null,
+        },
+        {
+            "name": "영남대",
+            "extraParam": null,
+        },
+        {
+            "name": "영남신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "영산대",
+            "extraParam": null,
+        },
+        {
+            "name": "영산선학대",
+            "extraParam": null,
+        },
+        {
+            "name": "예수대",
+            "extraParam": null,
+        },
+        {
+            "name": "예원예술대",
+            "extraParam": null,
+        },
+        {
+            "name": "용인대",
+            "extraParam": null,
+        },
+        {
+            "name": "우석대",
+            "extraParam": null,
+        },
+        {
+            "name": "우송대",
+            "extraParam": null,
+        },
+        {
+            "name": "울산대",
+            "extraParam": null,
+        },
+        {
+            "name": "원광대",
+            "extraParam": null,
+        },
+        {
+            "name": "위덕대",
+            "extraParam": null,
+        },
+        {
+            "name": "유원대",
+            "extraParam": null,
+        },
+        {
+            "name": "을지대",
+            "extraParam": null,
+        },
+        {
+            "name": "이화여대",
+            "extraParam": null,
+        },
+        {
+            "name": "인제대",
+            "extraParam": null,
+        },
+        {
+            "name": "인천가톨릭대",
+            "extraParam": null,
+        },
+        {
+            "name": "인천대",
+            "extraParam": null,
+        },
+        {
+            "name": "인하대",
+            "extraParam": null,
+        },
+        {
+            "name": "장로회신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "전남대",
+            "extraParam": null,
+        },
+        {
+            "name": "전북대",
+            "extraParam": null,
+        },
+        {
+            "name": "전주교대",
+            "extraParam": null,
+        },
+        {
+            "name": "전주대",
+            "extraParam": null,
+        },
+        {
+            "name": "제주국제대",
+            "extraParam": null,
+        },
+        {
+            "name": "제주대",
+            "extraParam": null,
+        },
+        {
+            "name": "조선대",
+            "extraParam": null,
+        },
+        {
+            "name": "중부대",
+            "extraParam": null,
+        },
+        {
+            "name": "중앙대",
+            "extraParam": null,
+        },
+        {
+            "name": "중앙승가대",
+            "extraParam": null,
+        },
+        {
+            "name": "중원대",
+            "extraParam": null,
+        },
+        {
+            "name": "진주교대",
+            "extraParam": null,
+        },
+        {
+            "name": "차의과학대",
+            "extraParam": null,
+        },
+        {
+            "name": "창신대",
+            "extraParam": null,
+        },
+        {
+            "name": "창원대",
+            "extraParam": null,
+        },
+        {
+            "name": "청운대",
+            "extraParam": null,
+        },
+        {
+            "name": "청주교대",
+            "extraParam": null,
+        },
+        {
+            "name": "청주대",
+            "extraParam": null,
+        },
+        {
+            "name": "초당대",
+            "extraParam": null,
+        },
+        {
+            "name": "총신대",
+            "extraParam": null,
+        },
+        {
+            "name": "추계예술대",
+            "extraParam": null,
+        },
+        {
+            "name": "춘천교대",
+            "extraParam": null,
+        },
+        {
+            "name": "충남대",
+            "extraParam": null,
+        },
+        {
+            "name": "충북대",
+            "extraParam": null,
+        },
+        {
+            "name": "침례신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "칼빈대",
+            "extraParam": null,
+        },
+        {
+            "name": "케이씨대",
+            "extraParam": null,
+        },
+        {
+            "name": "평택대",
+            "extraParam": null,
+        },
+        {
+            "name": "포항공대",
+            "extraParam": null,
+        },
+        {
+            "name": "한경대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국교원대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국교통대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국국제대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국기술교대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국산업기술대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국성서대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국외대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국체육대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국항공대",
+            "extraParam": null,
+        },
+        {
+            "name": "한국해양대",
+            "extraParam": null,
+        },
+        {
+            "name": "한남대",
+            "extraParam": null,
+        },
+        {
+            "name": "한동대",
+            "extraParam": null,
+        },
+        {
+            "name": "한라대",
+            "extraParam": null,
+        },
+        {
+            "name": "한려대",
+            "extraParam": null,
+        },
+        {
+            "name": "한림대",
+            "extraParam": null,
+        },
+        {
+            "name": "한밭대",
+            "extraParam": null,
+        },
+        {
+            "name": "한서대",
+            "extraParam": null,
+        },
+        {
+            "name": "한성대",
+            "extraParam": null,
+        },
+        {
+            "name": "한세대",
+            "extraParam": null,
+        },
+        {
+            "name": "한신대",
+            "extraParam": null,
+        },
+        {
+            "name": "한양대",
+            "extraParam": null,
+        },
+        {
+            "name": "한일장신대",
+            "extraParam": null,
+        },
+        {
+            "name": "협성대",
+            "extraParam": null,
+        },
+        {
+            "name": "호남대",
+            "extraParam": null,
+        },
+        {
+            "name": "호남신학대",
+            "extraParam": null,
+        },
+        {
+            "name": "호서대",
+            "extraParam": null,
+        },
+        {
+            "name": "호원대",
+            "extraParam": null,
+        },
+        {
+            "name": "홍익대",
+            "extraParam": null,
+        },
+    ]
+}
