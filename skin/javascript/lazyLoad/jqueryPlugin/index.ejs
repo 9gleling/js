@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+    <head>
+    <title>LazyLoad</title>
+    <style>
+        body {margin:0;padding:0;}
+        .wrapper {width:100%;}
+        .wrapper .contents img {display: block; margin: 0px auto; width:400px; height:350px;}
+        ul{list-style:none; padding-left:0px;}
+
+    </style>
+    </head>
+    
+    <body>
+    <div class="wrapper">
+        <div class="contents">
+            <ul class="img_list">
+
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://9gleling.github.io/js/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript">
+        const MY_GLOBAL_VAR = {};
+
+        const setImgList = function() {
+            const imgList = <%-imgList%>;
+
+            const appendImgList = [
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQh1dLOcvl-5WcPxrqDa7Dfr3di2dOmVu_Tag&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0GjfOsLrCLEyyqYQz7-UoaknIHDnu894AgQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5ONFGWVZTIczNTOZyICn31qrd2i4CaMIvFQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUsBqHX2IzRb3fOjHsdFpDWqTf6Un9TkpHQg&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0DPrcu5VGE3kceThruDRvz1IJAtvVzF3giA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6ziwigvtFvHXsxkePr-3ViUrzeNvxUzBrpQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wfx3vDQLlWSXWeP42s26Tw-QPpsJghqNLg&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKMfbQB-0xawMPdAb1egrpEfkqQTkuQqRP7g&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRi7OhfW0BhZzL3D4Swp_A7GQPwJE2OhsjXYw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSsf456iuOSIxIzhf4ccwyFjewi5GuTtsBWQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkPId4Hjm02Db3jqaXTn6UpzZzVfJB7I8lUw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvZZK4H-u8lPETwYJDEBN3m5R1-qVe1wicfQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPoUb8RIz4Dh0xt1_lzr2guUvFTL063_oWaw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTx6nhguApNcklkQUrT7PSI9Ufp-7Q6lxHng&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQA00K-Ka71gp4EHooCCGoxq7fUWXoWr3Aolg&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQneqotZFRHd_UpXEcKqMabrE05XDOgzot7hg&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAIC_jDD1ILxCAowrLHvCAIwWzB-gJuzx5Pw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4eaBUlGbEwUiJrNlSRGbLFZaTH-IYF7nvGw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfdHJgw8aFMTw-4otsrXirCLGXfrNLb1t7rA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSObUiyA6j9AuWgpVXtWr5ogXaEahFDRksXxA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTzzAkC30WN5AMwqCqY1HTLOYukwujAWmv2-Q&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQ8tdrF7sJh4Jo_OgSMBFl8cYhXhO62VoaXA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUtOdW84xU50QR3o33WeVk_ud26BC4hGm8Gw&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVvdCNBK7jIxYiHXsdup_9rCwN9lWHrzd4zg&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlhAL2ycF1zMPncyhhEUL27W7MDXpDdx0nQA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2kcyRmwNsiPrGN9TRhFCFBJfJdpbrA3tkbA&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0ARYgwjMgmGUOKYmo53dv58pkLTxUQA8fqQ&usqp=CAU'
+                },
+                {
+                    image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSt6taa0K52aikQ5jViNgs_JDDKytfgJCm_Ag&usqp=CAU'
+                }
+                ];
+
+            let html = '';
+            let appendImgHtml = '';
+            $(imgList).each((i, item) => {
+                html += '<li>';
+                html += `<img class="lazy" data-original="${item.image_url}">`;
+                html += '</li>';
+            });
+
+            // 추가 이미지 리스트 
+            $(appendImgList).each((i, item) => {
+                appendImgHtml += '<li>';
+                appendImgHtml += `<img class="lazy" data-original="${item.image_url}">`;
+                appendImgHtml += '</li>';
+            });
+
+            MY_GLOBAL_VAR.image_html = html
+            MY_GLOBAL_VAR.append_image_html = appendImgHtml
+            $('.img_list').append(MY_GLOBAL_VAR.image_html);
+
+        }();
+
+        const _init = () => {
+
+            $(window).on('load scroll', () => {
+                if(Math.round( $(window).scrollTop()) == $(document).height() - $(window).height() && $(window).scrollTop() > 0) {
+                    $('.img_list').append(MY_GLOBAL_VAR.append_image_html);
+                    $('img.lazy').lazyload();
+                }
+            });
+        }
+        $(() => {
+            _init();
+
+            $('img.lazy').lazyload();
+        });
+
+
+
+    </script>
+</body>
+</html>
