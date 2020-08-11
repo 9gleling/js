@@ -7,8 +7,13 @@ nodemon 사용
 npm i
 nodemon start main.js
 ```
-1. lazy load `nodejs(구글 이미지 크롤링)와 ejs로 구현` skin/javascript/lazyLoad 폴더의 ejs파일 참고
-	1.jquery plugin 
+1. lazy load `nodejs(구글 이미지 크롤링)와 ejs로 구현`
+	```
+	local 환경에서 확인 가능
+	http://localhost:3000/jqueryPlugin
+	http://localhost:3000/intersectionObserver
+	```
+	1. jquery plugin `js\skin\javascript\lazyLoad\intersectionObserver\index.ejs`
 		```
 		ex)
 		<img class="lazy" data-original="image src">
@@ -18,7 +23,7 @@ nodemon start main.js
 		});
 		</script>
 		```
-	2.intersectionObserver
+	2. intersectionObserver `js\skin\javascript\lazyLoad\intersectionObserver\index.ejs`
 		```
 		주요 method
 		IntersectionObserver.observe(target): 관찰 시작
@@ -40,4 +45,5 @@ nodemon start main.js
 		무한 이미지 스크롤 적용 (좋은 방법인지는 모르겠..)
 			- ul 스크롤 끝부분 감시자 추가 
 			- IntersectionObserver를 스크롤과 이미지 lazy load용 두개 생성
+			
 		```
